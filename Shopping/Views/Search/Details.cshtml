@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Details";
+}
+@model Shopping.Models.Product
+
+<div class="text-center">
+    <h2>@Model.Name</h2>
+
+    <div>
+        <img src="@Model.ImagePath" alt="@Model.Name" class="product-image" />
+    </div>
+
+    <div>
+        <strong>Category:</strong> @Model.Category
+    </div>
+
+    <div>
+        <strong>Price:</strong> $@Model.Price
+    </div>
+
+    <div>
+        <strong>Model Year:</strong> @Model.Year
+    </div>
+
+    <div>
+        <strong>Description:</strong> @Model.Description
+    </div
+
+    <div>
+        @if (Model.IsEco)
+        {
+            <strong>Is Eco Friendly</strong>
+        }
+        else
+        {
+            <strong>Is Not Eco Friendly</strong>
+        }
+    </div>
+
+</div>
